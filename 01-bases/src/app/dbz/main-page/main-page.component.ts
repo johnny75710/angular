@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 interface Personaje{
-  nombre: string;
-  poder: number
+  nombre: string | null;
+  poder: number | null;
 }
 @Component({
   selector: 'app-main-page',
@@ -11,16 +11,31 @@ interface Personaje{
 })
 
 export class MainPageComponent {
-cambioNombre($event: Event) {
-throw new Error('Method not implemented.');
-}
 
+// cambioNombre($event: Event) {
+
+// }
+
+  personajes: Personaje[] = [
+    {
+      nombre: 'Goku',
+      poder: 15000
+    }, 
+    {
+      nombre: 'Vegeta',
+      poder: 7500
+    }
+  ]
   nuevo: Personaje = {
-    nombre: 'Trucks',
-    poder: 14000
+    nombre: null,
+    poder: null
   }
 
   agregar(){
-    console.log(this.nuevo.nombre)
+    this.personajes.push(this.nuevo)
+    this.nuevo = {
+      nombre: null,
+      poder: null
+    }
   }
 }
