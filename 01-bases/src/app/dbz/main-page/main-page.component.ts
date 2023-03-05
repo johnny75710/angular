@@ -25,15 +25,7 @@ export class MainPageComponent {
     }
   ]
   nuevo: Personaje = {
-    nombre: null,
-    poder: null
-  }
-
-  agregar(){
-    this.personajes.push(this.nuevo)
-    this.nuevo = {
-      nombre: null,
-      poder: null
-    }
+    nombre: '',
+    poder: 35000
   }
 }
