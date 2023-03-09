@@ -12,6 +12,6 @@
   </div>
 
   <div class="col">
-    <app-agregar [personajes]="personajes"></app-agregar>
+    <app-agregar (onNuevoPersonaje)="cambioNombrePersonaje($event)"></app-agregar>
   </div>
 </div>

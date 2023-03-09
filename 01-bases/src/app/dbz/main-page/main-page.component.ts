@@ -28,4 +28,9 @@ export class MainPageComponent {
     nombre: '',
     poder: 35000
   }
+
+
+  cambioNombrePersonaje( NuevoPersonaje: Personaje ){
+    this.personajes.push(NuevoPersonaje)
+  }
 }
